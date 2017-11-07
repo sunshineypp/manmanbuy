@@ -31,8 +31,6 @@ $(function () {
         }
     });
 
-    //4.滚回顶部
-    $('.scroll_top').on('click',function () {
-        $('body,html').animate({scrollTop:0},500);
-    })
+    //回顶部
+    tools.scrollTop();
 });

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/*分类列表*/
+.buy_bijia_list{
+    border-top: 1px solid #ebebeb;
+    font-size: 14px;
+    line-height: 36px;
+}
+/*商品列表标题部分*/
+.buy_bijia_list .pt{
+    background: linear-gradient(#fff,#ebebeb);
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+}
+.buy_bijia_list .product_title_list{
+    float: left;
+}
+.buy_bijia_list .product_search{
+    float: right;
+}
+.buy_bijia_list .product_search button{
+    border: none;
+    background-color: #ddd;
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+}
+/*内容详情*/
+.product-bijia{
+    position: relative;
+}

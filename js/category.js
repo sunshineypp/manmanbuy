@@ -17,7 +17,7 @@ $(function () {
                     // }
 
                     $(lis[i]).on('click','a',function () {
-                        console.log($(this).parent());
+                        // console.log($(this).parent());
                         var li = $(this).parent();
                         // console.log($(this).children().length);
                         if(li.children().length != 1){
@@ -35,7 +35,7 @@ $(function () {
                                 data: {titleid:titleId},
                                 dataType: 'json',
                                 success: function (data) {
-                                    console.log(data);
+                                    // console.log(data);
                                     var html = template('content_tpl',data);
                                     // console.log(html);
                                     $this.append(html);
@@ -54,4 +54,6 @@ $(function () {
         }
     });
 
+    //回顶部
+    tools.scrollTop();
 });

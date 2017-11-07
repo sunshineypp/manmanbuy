@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>商品列表</title>
+  <title>慢慢买-商品列表</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/productList.css">
 </head>
 <body>
-  
+  <div class="container">
+    <!--头部-->
+    <header class="buy_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="down_app">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <!--搜索区域-->
+    <section class="buy_search">
+      <input type="text" placeholder="请输入你想比价的商品">
+      <button>搜索</button>
+    </section>
+
+    <!--商品列表-->
+    <section class="buy_product_list">
+      <!--商品列表标题部分-->
+      <div class="clearfix pt">
+        <div class="product_title_list">
+          <!--挖个坑-->
+        </div>
+        <div class="product_search">
+          <button>筛选</button>
+        </div>
+      </div>
+      <!--商品内容列表-->
+      <div class="product_content_list">
+       <!--挖个坑-->
+      </div>
+
+    </section>
+
+    <!--底部-->
+    <footer class="buy_footer">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;">登录</a>
+        </li>
+        <li>
+          <a href="javascript:;">注册</a>
+        </li>
+        <li>
+          <a class="scroll_top" href="javascript:;"><i></i>返回顶部</a>
+        </li>
+      </ul>
+
+      <div class="footer_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!--商品标题模板-->
+  <script type="text/html" id="title_tpl">
+    {{each result v i}}
+    <a href="index.html">首页</a>
+    >
+    <a href="category.html">全部分类</a>
+    >
+    <a href="productList.html">{{v.category}}</a>
+    >
+    {{/each}}
+  </script>
+
+  <!--商品内容模板-->
+  <script type="text/html" id="content_tpl">
+    <ul>
+      {{each result v i}}
+      <li>
+        <a href="prodetails.html?productid={{v.productId}}" class="clearfix">
+          <div class="pic">
+            <%=#v.productImg %>
+          </div>
+          <div class="info">
+            <p class="tit ellipsis">{{v.productName}}</p>
+            <p class="price">{{v.productPrice}}</p>
+            <p class="msg">
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="clearfix page" data-count="{{pages}}">
+          <span>
+            <a class="prePage" href="javascript:;">上一页</a>
+          </span>
+          <span>
+            <select name="select" id="selectPage">
+              {{each page v i}}
+              <option {{v == currentPage?"selected":""}} value="{{v}}">{{v}}/{{pages}}</option>
+              {{/each}}
+            </select>
+          </span>
+          <span>
+            <a class="nextPage" href="javascript:;">下一页</a>
+          </span>
+    </div>
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/comment.js"></script>
+  <script src="js/productList.js"></script>
 </body>
 </html>
