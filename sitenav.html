@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买-商场导航</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+  <div class="container">
+    <!--头部-->
+    <header class="buy_header">
+      <div class="logo">
+        <a href="javascript:history.go(-1);"><img class="back" src="images/back.png" alt=""></a>
+        <h1>商场导航</h1>
+      </div>
+      <div class="down_app">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <main class="buy_site_nav">
+      <ul class="clearfix">
+        <!--挖个坑-->
+      </ul>
+    </main>
+
+    <footer class="buy_footer">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;">登录</a>
+        </li>
+        <li>
+          <a href="javascript:;">注册</a>
+        </li>
+        <li>
+          <a class="scroll_top" href="javascript:;"><i></i>返回顶部</a>
+        </li>
+      </ul>
+
+      <div class="footer_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/html" id="site_tpl">
+    {{each result v i}}
+    <li>
+      <a data-nav-id="{{v.navId}}" href="{{v.navHref}}" target="_blank">
+        <img src="{{v.navImg}}" alt="">
+        {{v.navTitle}}
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/comment.js"></script>
+  <script src="js/sitenav.js"></script>
+</body>
+</html>

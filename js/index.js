@@ -7,7 +7,7 @@ $(function () {
         url : url,
         dataType: 'json',
         success: function (data) {
-            // console.log(data);
+            console.log(data);
             $('.nav ul').html( template('nav_tpl',data) );
             //让后四项默认隐藏，
             $('.nav ul li:nth-child(8)~li').addClass('hide');
@@ -26,7 +26,7 @@ $(function () {
         url: discountUrl,
         dataType: 'json',
         success: function (data) {
-            // console.log(data);
+            console.log(data);
             $('.product_list ul').html( template('discount_tpl',data) );
         }
     });

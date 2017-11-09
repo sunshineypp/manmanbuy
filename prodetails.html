@@ -35,17 +35,67 @@
       <!--商品列表标题部分-->
       <div class="clearfix pt">
         <div class="product_title_list">
-          <!--挖个坑-->
+          <a href="index.html">首页</a>
+          >
+          <a href="category.html">全部分类</a>
+          >
+          <a href="productList.html" class="pro_name"></a>
+          >
         </div>
         <div class="product_search">
           <button>筛选</button>
         </div>
       </div>
+
       <!--商品内容列表-->
       <div class="product_bijia">
-        
+        <!--挖个坑-->
       </div>
 
+      <!--商品导航-->
+      <div class="product_nav">
+        <ul>
+          <li class="now">
+            <a href="javascript:;">比价购买</a>
+          </li>
+          <li class="mtab">
+            <a href="javascript:;">产品参数</a>
+          </li>
+          <li>
+            <a href="javascript:;">评价(2322)</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--商品价格-->
+      <div class="product_price clearfix">
+        <div class="price_left">
+          <i></i>
+          京东商城
+        </div>
+        <div class="price_right">
+          <span>&yen;4999.00</span>
+          <button>去购买</button>
+        </div>
+        <p class="node">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+      </div>
+
+      <!--网友评价-->
+      <div class="product-com-title">
+        <p>网友评价</p>
+      </div>
+
+      <!--评价列表-->
+      <div class="product-com-list">
+        <ul>
+          <!--挖个坑-->
+        </ul>
+      </div>
+
+      <!--更多评价-->
+      <div class="product_com_more">
+        <a href="javascript:;">查看更多评价</a>
+      </div>
     </section>
 
     <!--底部-->
@@ -74,20 +124,32 @@
     </footer>
   </div>
 
-  <!--商品标题模板-->
-  <script type="text/html" id="title_tpl">
+  <!--商品详情模板-->
+  <script type="text/html" id="product_tpl">
     {{each result v i}}
-    <a href="index.html">首页</a>
-    >
-    <a href="category.html">全部分类</a>
-    >
-    <a href="productList.html">{{v.category}}</a>
-    >
+    <p class="product_name">{{v.productName}}</p>
+    <%=#v.productImg %>
+    <img class="shoucang" src="images/shoucang.png" alt="">
+    {{/each}}
+  </script>
+
+  <!--评价列表模板-->
+  <script type="text/html" id="com_tpl">
+    {{each result v i}}
+    <li>
+      <p class="clearfix">
+        <span class="com_name">{{v.comName}}</span>
+        <span class="com_time">{{v.comTime}}</span>
+      </p>
+      <p class="buy_add">{{v.comFrom}}</p>
+      <p class="com_content">{{v.comContent}}</p>
+    </li>
     {{/each}}
   </script>
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/comment.js"></script>
+  <script src="js/prodetails.js"></script>
 </body>
 </html>

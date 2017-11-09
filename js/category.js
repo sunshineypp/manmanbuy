@@ -35,7 +35,7 @@ $(function () {
                                 data: {titleid:titleId},
                                 dataType: 'json',
                                 success: function (data) {
-                                    // console.log(data);
+                                    console.log(data);
                                     var html = template('content_tpl',data);
                                     // console.log(html);
                                     $this.append(html);

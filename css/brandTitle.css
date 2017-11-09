@@ -1,0 +1,36 @@
+@charset "utf-8";
+.buy_brand_title .brand_nav{
+    height: 38px;
+    line-height: 36px;
+    background: linear-gradient(#fff,#ebebeb);
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 14px;
+}
+.buy_brand_title p{
+    font-size: 16px;
+    color: #874604;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+.buy_brand_title .brand_title{
+    border-radius: 5px;
+    background: #ededed;
+    border: 1px solid #ccc;
+}
+.buy_brand_title .brand_title li a{
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    padding-left: 16px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    background: url("../images/arrow1.gif") right center no-repeat;
+}

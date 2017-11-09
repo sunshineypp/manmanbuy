@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买-白菜价</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+  <div class="container">
+    <!--头部-->
+    <header class="buy_header">
+      <div class="logo">
+        <a href="javascript:history.go(-1);"><img class="back" src="images/back1.png" alt=""></a>
+        <h1>白菜价-淘宝内部券</h1>
+      </div>
+      <div class="down_app">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <main class="buy_baicaijia_pro">
+      <!--标题-->
+      <div class="title_wrap" id="wrapper">
+        <ul class="tab clearfix" id="tab">
+          <!--挖个坑-->
+        </ul>
+        <!--<div class="search">-->
+          <!--<img src="images/search.png" alt="">-->
+        <!--</div>-->
+      </div>
+
+      <!--内容-->
+      <div class="bcj_list">
+        <ul class="clearfix">
+          <!--挖个坑-->
+        </ul>
+      </div>
+    </main>
+
+
+    <footer class="buy_footer">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;">登录</a>
+        </li>
+        <li>
+          <a href="javascript:;">注册</a>
+        </li>
+        <li>
+          <a class="scroll_top" href="javascript:;"><i></i>返回顶部</a>
+        </li>
+      </ul>
+
+      <div class="footer_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!--标题模板-->
+  <script type="text/html" id="title_tpl">
+    {{each result v i}}
+    <li class="{{v.titleId==0?'active':''}}">
+      <a href="baicaijia.html?titleid={{v.titleId}}">{{v.title}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!--内容模板-->
+  <script type="text/html" id="content_tpl">
+    {{each result v i}}
+    <li>
+      <div class="bcj_pic">
+        <%=#v.productImg %>
+      </div>
+      <div class="bcj_info">
+        <p class="name"><%=#v.productName %></p>
+        <p class="price"><i>券后</i><%=#v.productPrice %></p>
+        <div class="a">
+          <%=#v.productCouponRemain %>
+          <div class="card clearfix">
+            <div class="left">
+              <%=#v.productCoupon %>
+            </div>
+            <div class="right">
+              <%=#v.productHref %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/comment.js"></script>
+  <script src="js/baicaijia.js"></script>
+</body>
+</html>

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>慢慢买-首页</title>
+  <title>慢慢买-品牌大全</title>
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
 </head>
 <body>
   <div class="container">
@@ -30,41 +30,23 @@
       <button>搜索</button>
     </section>
 
-    <!--导航区域-->
-    <section class="nav">
-      <ul class="clearfix">
-        <!--挖个坑-->
-      </ul>
-    </section>
+    <main class="buy_brand_title">
+      <!--指引-->
+      <nav class="brand_nav">
+        <a href="index.html">首页</a>
+        >
+        <a href="category.html">全部分类</a>
+        >
+      </nav>
+      <p>热门品牌排行</p>
 
-    <!--超值折扣-->
-    <main class="buy_discount">
-      <!--标题-->
-      <div class="list_title">
-        <span>超值折扣推荐</span>
-        <img src="images/more.png" alt="">
-      </div>
-
-      <!--商品列表-->
-      <div class="product_list">
-        <ul class="clearfix">
+      <div class="brand_title">
+        <ul>
           <!--挖个坑-->
         </ul>
       </div>
-
-      <!--更多优惠信息-->
-      <div class="more_bar">
-        <a href="moneyctrl.html">更多优惠信息 »</a>
-      </div>
     </main>
 
-    <!--品牌排行-->
-    <section class="buy_brand">
-      <div class="brand">
-        <span>品牌排行</span>
-        <img src="images/more.png" alt="">
-      </div>
-    </section>
 
     <footer class="buy_footer">
       <ul class="clearfix">
@@ -91,42 +73,17 @@
     </footer>
   </div>
 
-  <!--导航区域模板-->
-  <script type="text/html" id="nav_tpl">
+  <script type="text/html" id="brand_title_tpl">
     {{each result v i}}
     <li>
-      <a href="{{v.titlehref}}">
-        <%=#v.img%>
-        <p>{{v.name}}</p>
-      </a>
-    </li>
-    {{/each}}
-  </script>
-
-  <!--折扣商品模板-->
-  <script type="text/html" id="discount_tpl">
-    {{each result v i}}
-    <li>
-      <a href="moneyproduct.html?productid={{v.productId}}">
-        <%=#v.productImg2 %>
-        <div class="product_info">
-          <div class="title">
-            {{v.productName}}
-            <span>{{v.productPinkage}}</span>
-          </div>
-          <div class="others">
-            <span>{{v.productFrom}} | {{v.productTime}}</span>
-            <span>{{v.productComCount.slice(1,2)}}</span>
-          </div>
-        </div>
-      </a>
+      <a href="brand.html?brandtitleid={{v.brandTitleId}}&categoryId={{v.categoryId}}">{{v.brandTitle}}</a>
     </li>
     {{/each}}
   </script>
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
-  <script src="js/index.js"></script>
   <script src="js/comment.js"></script>
+  <script src="js/brandTitle.js"></script>
 </body>
 </html>

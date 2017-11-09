@@ -1,0 +1,160 @@
+@charset "utf-8";
+.buy_brand .brand_nav{
+    height: 38px;
+    line-height: 36px;
+    background: linear-gradient(#fff,#ebebeb);
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 14px;
+}
+.buy_brand .brand_p{
+    font-size: 16px;
+    color: #874604;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+.buy_brand .brand li{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+    background: url("../images/arrow-right.svg") right center no-repeat;
+    background-size: 20px 20px;
+}
+.buy_brand .brand li a i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: #c9c9c9;
+    color: #FFFFFF;
+    line-height: 20px;
+    vertical-align: top;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+}
+.buy_brand .brand .con{
+    display: inline-block;
+}
+.buy_brand .brand .con .day{
+    color: #999;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.buy_brand .brand li .top1{
+    background-color: #f10e0e;
+}
+.buy_brand .brand li .top2{
+    background-color: #ff9314;
+}
+.buy_brand .brand li .top3{
+    background-color: #8adf5b;
+}
+
+/*销量排行*/
+.brand_count li{
+    padding: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.brand_count li a{
+    display: block;
+}
+.brand_count li .pic{
+    float: left;
+    width: 110px;
+}
+.brand_count li .pic img{
+    width: 100px;
+    height: 100px;
+}
+.brand_count li .info{
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 110px;
+}
+.brand_count li .info .tit{
+    color: #333333;
+    line-height: 22px;
+    min-height: 44px;
+}
+.brand_count li .info .price{
+    height: 25px;
+    margin-top: 4px;
+}
+.brand_count li .info .price span{
+    font-size: 18px;
+    color: #ea3900;
+    float: left;
+}
+.brand_count li .info .price i{
+    float: right;
+    width: 90px;
+    background: url(../images/star.png) no-repeat;
+    display: inline-block;
+    height: 18px;
+}
+.brand_count li .info .other{
+    color: #a1a1a1;
+    font-size: 12px;
+}
+.brand_count li .info .other span{
+    margin-right: 10px;
+}
+
+/*最新评论*/
+.new_cmt li{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+}
+.new_cmt li a{
+    display: block;
+}
+.new_cmt li .pro_top{
+    margin-bottom: 10px;
+}
+.new_cmt li .pic{
+    float: left;
+    margin-right: 10px;
+}
+.new_cmt li .pic img{
+    width: 100px;
+    height: 100px;
+}
+.new_cmt li .pro_top p{
+    color: #999999;
+    line-height: 22px;
+    font-size: 14px;
+    word-break: break-all;
+}
+.new_cmt .cmt_box{
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+}
+.new_cmt .cmt_box .name{
+    color: #4f6900;
+}
+.new_cmt .cmt_box .name .star{
+    display: inline-block;
+    width: 90px;
+    height: 18px;
+    vertical-align: middle;
+    background: url("../images/star.png") no-repeat;
+    margin-bottom: 5px;
+}
+.new_cmt .cmt_box .name .time{
+    font-size: 14px;
+    color: #999999;
+    float: right;
+}
+.new_cmt .cmt_box .cmt{
+    margin-top: 10px;
+    line-height: 22px;
+    font-size: 15px;
+    word-break: break-all;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买-凑单品</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/jsproduct.css">
+</head>
+<body>
+  <div class="container">
+    <!--头部-->
+    <header class="buy_header">
+      <div class="logo">
+        <a href="javascript:history.go(-1);"><img class="back" src="images/back.png" alt=""></a>
+        <h1>凑单品</h1>
+      </div>
+      <div class="down_app">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <main class="buy_gsproduct">
+      <!--导航-->
+      <div class="gs_header">
+        <ul class="clearfix">
+          <!--挖个坑-->
+        </ul>
+        <div class="search">
+          <img src="images/search.png" alt="">
+        </div>
+      </div>
+      <!--下拉-->
+      <div class="popsort popbox" id="shop">
+        <ul>
+          <li>
+            <a href="javascript:;">京东</a>
+          </li>
+          <li>
+            <a href="javascript:;">一号店</a>
+          </li>
+          <li>
+            <a href="javascript:;">天猫超市</a>
+          </li>
+        </ul>
+      </div>
+      <div class="popcat popbox" id="area">
+        <ul>
+          <!--挖个坑-->
+        </ul>
+      </div>
+      <div class="popcat popbox" id="price">
+        <ul>
+          <li>
+            <a href="javascript:;">全部价格</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--内容-->
+      <div class="gs_product_list">
+        <ul class="clearfix">
+          <!--挖个坑-->
+        </ul>
+      </div>
+    </main>
+
+    <footer class="buy_footer">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;">登录</a>
+        </li>
+        <li>
+          <a href="javascript:;">注册</a>
+        </li>
+        <li>
+          <a class="scroll_top" href="javascript:;"><i></i>返回顶部</a>
+        </li>
+      </ul>
+
+      <div class="footer_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!--店铺信息-->
+  <script type="text/html" id="shop_tpl">
+    {{each result v i}}
+    <li>
+      <a data-id="{{v.shopId}}" href="javascript:;">{{v.shopName}}<i></i></a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!--下拉信息-->
+  <script type="text/html" id="down_tpl">
+    {{each result v i}}
+    <li>
+      <a data-areaid="{{v.areaId}}" href="javascript:;">{{v.areaName}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!--商品信息-->
+  <script type="text/html" id="pro_tpl">
+    {{each result v i}}
+    <li>
+      <a data-shopid="{{v.productId}}" href="javascript:;">
+        <div class="pic">
+          <img src="{{v.productImg}}" alt="">
+        </div>
+        <p class="title">{{v.productName}}</p>
+        <div class="other clearfix">
+          <span>{{v.productPrice}}</span>
+          <button>去凑单</button>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/comment.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+</html>

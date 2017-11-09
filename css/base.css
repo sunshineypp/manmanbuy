@@ -16,6 +16,9 @@ ul{
 input{
     outline:none;
 }
+em,i{
+    font-style: normal;
+}
 .clearfix::after{
     content: '';
     display: block;
@@ -217,4 +220,32 @@ input{
     font-size: 12px;
     color: #666;
     padding: 15px 0;
+}
+
+/*分页*/
+.page{
+    margin-top: 10px;
+    text-align: center;
+}
+.page span{
+    width: 33.33%;
+    float: left;
+}
+.page span a{
+    width: 82px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+    border-bottom: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    margin: 0 auto;
+}
+.page select{
+    border: 1px solid #bababa;
+    font-size: 16px;
+    padding: 8px 15px;
+    height: 36px;
 }
